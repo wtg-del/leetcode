@@ -1,9 +1,9 @@
 var threeSum = function (nums) {
   const len = nums.length;
-  nums.sort();
+  nums.sort((a, b) => a - b)
   if (nums[0] > 0 || nums[len - 1] < 0) return [];
   const res = [];
-  for (let i = 0; i < len; i++) {
+  for (let i = 0; i < len - 2; i++) {
     if (nums[i] > 0) break;
     // 定值去重
     if (i > 0 && nums[i] === nums[i - 1]) continue;
