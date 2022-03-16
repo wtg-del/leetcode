@@ -14,9 +14,9 @@ var threeSum = function (nums) {
       if (sum === 0) {
         res.push([nums[i], nums[L], nums[R]]);
         // L去重
-        while (L < R && nums[L] === nums[L + 1]) L++;
+        while (L < R && nums[L] === nums[++L]);
         // R去重
-        while (L < R && nums[R] === nums[R - 1]) R--;
+        while (L < R && nums[R] === nums[--R]);
         L++;
         R--;
       } else if (sum < 0) {
